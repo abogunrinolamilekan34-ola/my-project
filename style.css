@@ -10,6 +10,20 @@ header {
   position:sticky; top:0;
 }
 
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: #111;
+}
 
 .logo {
    font-weight:900; 
@@ -379,7 +393,6 @@ footer {
     }
 
 @media(max-width:768px){
-  header nav { display:none; }
   .hero { flex-direction:column; }
   .hero-text, .hero-img { width:100%; }
   .project-grid, .service-grid, .stats, .testi-grid, .process-grid, 
@@ -416,16 +429,39 @@ footer {
     padding: 16px 5%;
   }
 
+  .menu-toggle {
+    display: flex;
+    order: 2;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+
+  header .btn-small {
+    order: 1;
+    margin-left: auto;
+  }
+
   header nav {
     order: 3;
-    display: flex;
+    display: none;
     flex: 1 0 100%;
-    flex-wrap: wrap;
-    gap: 10px 18px;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 0;
+    border-top: 1px solid #eee;
+  }
+
+  header nav.is-open {
+    display: flex;
   }
 
   header nav a {
     margin: 0;
+    padding: 12px 0;
   }
 
   .hero {
@@ -494,10 +530,6 @@ footer {
 
   header .btn-small {
     padding: 8px 12px;
-  }
-
-  header nav {
-    gap: 10px 14px;
   }
 
   .hero {
