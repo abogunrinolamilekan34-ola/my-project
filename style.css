@@ -441,12 +441,11 @@ footer {
   }
 
   header .btn-small {
-    order: 1;
-    margin-left: auto;
+    order: 3;
   }
 
   header nav {
-    order: 3;
+    order: 4;
     display: none;
     flex: 1 0 100%;
     flex-direction: column;
